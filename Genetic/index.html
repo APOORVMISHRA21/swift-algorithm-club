@@ -34,7 +34,8 @@
 <p>We will be creating a bio-inspired world where the absolute existence is the string <code>Hello, World!</code>. Nothing in this universe is better and it's our goal to get as close to it as possible to ensure survival.</p>
 <h3>Define the Universe</h3>
 <p>Before we dive into the core processes we need to set up our "universe". First let's define a lexicon, a set of everything that exists in our universe.</p>
-<div class="highlight highlight-source-swift"><pre><span class="pl-k">let</span> lex<span class="pl-k">:</span> [<span class="pl-c1">UInt8</span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span> !<span class="pl-cce">\"</span>#$%&amp;<span class="pl-cce">\'</span>()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[<span class="pl-cce">\</span>]^_`abcdefghijklmnopqrstuvwxyz{|}~<span class="pl-pds">"</span></span>.<span class="pl-smi">asciiArray</span></pre></div>
+<pre lang="swift"><code>let lex: [UInt8] = " !\"#$%&amp;\'()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~".asciiArray
+</code></pre>
 <p>To make things easier, we are actually going to work in <a href="https://en.wikipedia.org/wiki/List_of_Unicode_characters" rel="nofollow">Unicode values</a>, so let's define a String extension to help with that.</p>
 <div class="highlight highlight-source-swift"><pre><span class="pl-k">extension</span> <span class="pl-en"><span class="pl-c1">String</span></span> {
   <span class="pl-k">var</span> unicodeArray<span class="pl-k">:</span> [<span class="pl-c1">UInt8</span>] {
